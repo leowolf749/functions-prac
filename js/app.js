@@ -1,18 +1,13 @@
 //---------------------------------------------
 console.log('#1. PALINDROME');
 function palindrome (str) {
-    // convert to lowercase
+    // change entire string to lowercase
     let lcase = str.toLowerCase();
-  
-    // if spaces matter, all you need is this line
-    // return lcase === lcase.split('').reverse().join('');
-  
-    // remove all spaces
+    // get rid of all spaces
     let noSpaces = lcase.split(' ').join('');
-    console.log(noSpaces);
- 
-    // compare string to reverse
-    return noSpaces === noSpaces.reverse();
+    // check if the string is a palindrome
+    let noSpacesReverse = noSpaces.split('');
+    return noSpaces === noSpacesReverse.reverse().join('');
 }
 
 console.log(palindrome("bat tab"));
